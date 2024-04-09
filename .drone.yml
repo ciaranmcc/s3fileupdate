@@ -3,8 +3,8 @@ type: kubernetes
 name: simple-print
 
 steps:
-  - name: print-msg
-    image: alpine
+  - name: list s3 buckets
+    image: banst/awscli
     environment:
       AWS_ACCESS_KEY_ID:
         from_secret: AWS_ACCESS_KEY
@@ -14,4 +14,5 @@ steps:
       - echo "Hello, Drone CI/CD !"
       - echo $AWS_ACCESS_KEY_ID
       - echo $AWS_SECRET_ACCESS_KEY_ID
+      - aws s3 ls
       - exit 1
