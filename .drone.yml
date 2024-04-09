@@ -5,5 +5,12 @@ name: simple-print
 steps:
   - name: print-msg
     image: alpine
+    environment:
+      AWS_ACCESS_KEY_ID:
+        from_secret: AWS_ACCESS_KEY
+      AWS_SECRET_ACCESS_KEY:
+        from_secret: AWS_SECRET_ACCESS_KEY
     commands:
       - echo "Hello, Drone CI/CD !"
+      - echo $AWS_ACCESS_KEY_ID
+      - echo $AWS_SECRET_ACCESS_KEY_ID
