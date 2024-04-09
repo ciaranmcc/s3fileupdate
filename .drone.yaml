@@ -1,0 +1,9 @@
+kind: pipeline
+type: docker
+name: simple-print
+
+steps:
+  - name: print-message
+    image: alpine
+    commands:
+      - echo "Hello, Drone CI/CD!"
