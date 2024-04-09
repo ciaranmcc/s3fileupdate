@@ -14,4 +14,4 @@ steps:
     commands:
       - aws s3 ls
       - aws s3 cp s3://testcmcbucket/test.json .
-      - exit 1
+      - cat test.json
