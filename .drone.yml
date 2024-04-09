@@ -4,7 +4,7 @@ name: simple-print
 
 steps:
   - name: list s3 buckets
-    image: banst/awscli
+    image: amazon/aws-cli
     environment:
       AWS_ACCESS_KEY_ID:
         from_secret: AWS_ACCESS_KEY
