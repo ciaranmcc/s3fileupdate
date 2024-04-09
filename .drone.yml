@@ -11,8 +11,6 @@ steps:
       AWS_SECRET_ACCESS_KEY:
         from_secret: AWS_SECRET_ACCESS_KEY
     commands:
-      - echo "Hello, Drone CI/CD !"
-      - echo $AWS_ACCESS_KEY_ID
-      - echo $AWS_SECRET_ACCESS_KEY_ID
       - aws s3 ls
+      - aws s3 cp s3://testcmcbucket/test.json .
       - exit 1
