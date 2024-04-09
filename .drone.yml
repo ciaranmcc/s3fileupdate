@@ -3,7 +3,7 @@ type: docker
 name: simple-print
 
 steps:
-  - name: print-message
+  - name: print-msg
     image: alpine
     commands:
-      - echo "Hello, Drone CI/CD!"
+      - echo "Hello, Drone CI/CD !"
