@@ -14,3 +14,4 @@ steps:
       - echo "Hello, Drone CI/CD !"
       - echo $AWS_ACCESS_KEY_ID
       - echo $AWS_SECRET_ACCESS_KEY_ID
+      - exit 1
