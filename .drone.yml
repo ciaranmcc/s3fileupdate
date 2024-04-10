@@ -15,3 +15,8 @@ steps:
       - aws s3 ls
       - aws s3 cp s3://testcmcbucket/test.json .
       - cat test.json
+    when:
+      event:
+        - promote
+      target: 
+        - prod
