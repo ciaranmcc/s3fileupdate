@@ -15,7 +15,7 @@ steps:
       - aws s3 ls
       - aws s3 cp s3://testcmcbucket/test.json .
       - cat test.json
-      - echo ${TAG}
+      - echo ${TESTING}
     when:
       event:
         - promote
